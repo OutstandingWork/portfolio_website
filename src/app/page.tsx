@@ -1,65 +1,74 @@
-import Image from "next/image";
+import { ArrowRight, Terminal, Brain, ChevronRight } from 'lucide-react';
+import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 md:mt-24">
+      <div className="flex flex-col md:flex-row gap-12 items-center">
+        
+        <div className="flex-1 space-y-8">
+          <div className="inline-flex items-center space-x-2 bg-slate-900/50 border border-slate-800 rounded-full px-4 py-1.5 text-sm text-cyan-400 font-medium">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
+            </span>
+            <span>Available for new opportunities</span>
+          </div>
+          
+          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-white">
+            Hi, I'm <span className="text-cyan-500">Pratyush Ranjan</span>
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          
+          <h2 className="text-2xl md:text-3xl font-medium text-slate-400">
+            B.Tech at <span className="text-white">IIT Bombay</span>
+            <br /> Minor in <span className="text-cyan-400">AI & Data Science</span>
+          </h2>
+          
+          <p className="text-lg text-slate-400 max-w-2xl leading-relaxed">
+            I specialize in building intelligent systems, ranging from Generative AI workflows to deep learning models for predictive analytics. Currently exploring agentic pipelines and computer vision.
           </p>
+          
+          <div className="flex flex-wrap gap-4 pt-4">
+            <Link href="/projects" className="inline-flex items-center space-x-2 bg-cyan-600 hover:bg-cyan-500 text-white px-6 py-3 rounded-lg font-medium transition-colors">
+              <span>View Projects</span>
+              <ArrowRight size={18} />
+            </Link>
+            <a href="https://github.com/OutstandingWork" target="_blank" rel="noopener noreferrer" className="inline-flex items-center space-x-2 bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 px-6 py-3 rounded-lg font-medium transition-colors">
+              <Terminal size={18} />
+              <span>GitHub</span>
+            </a>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        <div className="flex-1 w-full max-w-md">
+          <div className="relative aspect-square">
+            <div className="absolute inset-0 bg-gradient-to-tr from-cyan-500/20 to-purple-500/20 rounded-2xl blur-3xl"></div>
+            <div className="relative h-full w-full bg-slate-900 border border-slate-800 rounded-2xl p-8 flex flex-col justify-center shadow-2xl">
+              <div className="space-y-6">
+                <div className="flex items-center space-x-4 border-b border-slate-800 pb-4">
+                  <Brain className="text-cyan-500 w-8 h-8" />
+                  <span className="text-xl font-semibold text-white">Core Focus</span>
+                </div>
+                <ul className="space-y-4 text-slate-300">
+                  <li className="flex items-start space-x-3">
+                    <ChevronRight className="text-cyan-500 mt-0.5 flex-shrink-0 w-5 h-5" />
+                    <span><strong>Generative AI & LLMs:</strong> RAG, Agentic pipelines, Langchain, Prompt Engineering.</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <ChevronRight className="text-cyan-500 mt-0.5 flex-shrink-0 w-5 h-5" />
+                    <span><strong>Computer Vision:</strong> YOLO, U-Net, CNNs, Image Classification.</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <ChevronRight className="text-cyan-500 mt-0.5 flex-shrink-0 w-5 h-5" />
+                    <span><strong>Data Science:</strong> Predictive Modeling, Clustering, Time Series (LSTM).</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
-      </main>
+
+      </div>
     </div>
   );
 }
