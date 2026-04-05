@@ -3,6 +3,14 @@ import { Code2, Terminal, ExternalLink } from "lucide-react";
 export default function Projects() {
   const projects = [
     {
+      title: "News-AI",
+      context: "ET AI Hackathon 2026",
+      date: "Apr '26",
+      description: "Developed an AI-native news platform combining real-time business curation with local SD-Turbo image generation. Optimized for consumer GPUs (4GB VRAM), providing 1-second image generation and automated narrated news video production.",
+      tags: ["FastAPI", "SD-Turbo", "Streamlit", "LLM", "Generative AI"],
+      github: "https://github.com/OutstandingWork/News-AI"
+    },
+    {
       title: "Decision Science Track",
       context: "Hackathon | American Express",
       date: "Jun '24",

@@ -10,7 +10,7 @@ export default function Skills() {
     {
       category: "Libraries & Frameworks",
       icon: <Layers className="w-5 h-5 text-purple-400" />,
-      skills: ["NumPy", "Pandas", "Scikit-learn", "PyTorch", "TensorFlow", "SciPy", "Matplotlib", "LangChain"]
+      skills: ["NumPy", "Pandas", "Scikit-learn", "PyTorch", "TensorFlow", "SciPy", "Matplotlib", "LangChain", "FastAPI", "Streamlit", "Gradio"]
     },
     {
       category: "Software & Packages",
